@@ -1,0 +1,152 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    font-family: Arial, sans-serif;
+    background-color: #f4f4f4;
+}
+
+header {
+    background-color: #4CAF50;
+    color: white;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 10px 20px;
+}
+
+.text {
+    font-size: 24px;
+    font-weight: bold;
+    margin: 20px;
+}
+
+.logo {
+    border: 5px solid black;
+}
+
+.navbar {
+    margin-left: 50px;
+}
+
+.navbar ul {
+    list-style: none;
+    display: flex;
+    justify-content: center;
+    flex-grow: 1;
+}
+
+.navbar ul li {
+    margin: 0 15px;
+}
+
+.navbar ul li a {
+    color: white;
+    text-decoration: none;
+    font-size: 18px;
+    font-weight: bold;
+}
+
+.navbar ul li a:hover {
+    text-decoration: underline;
+}
+
+.search-bar {
+    margin-left: auto;
+
+}
+
+.search-bar input[type="text"] {
+    padding: 5px;
+    border: none;
+    border-radius: 3px;
+    width:500px;
+}
+
+/* Carousel Styling */
+.carousel-container {
+    margin: 20px auto;
+    padding: 20px;
+    border: 5px solid #4CAF50; /* Add border around the carousel */
+    width: 90%; /* Give enough space to the carousel */
+    background-color: #fff;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1); /* Optional shadow for effect */
+}
+
+.carousel-item img {
+    max-height: 500px;
+    object-fit: cover;
+    object-position: center;
+    width: 100%;
+}
+
+.carousel-control-prev-icon, 
+.carousel-control-next-icon {
+    background-color: rgba(0, 0, 0, 0.5);
+    border-radius: 50%;
+    padding: 10px;
+}
+
+.carousel-indicators button {
+    background-color: #4CAF50;
+}
+
+/* Media Query for Smaller Screens */
+@media (max-width: 768px) {
+    header {
+        flex-direction: column;
+        align-items: flex-start;
+    }
+
+    .navbar {
+        margin-left: 0;
+        width: 100%;
+    }
+
+    .navbar ul {
+        flex-direction: column;
+        align-items: flex-start;
+    }
+
+    .navbar ul li {
+        margin: 5px 0;
+    }
+
+    .search-bar {
+        width: 100%;
+    }
+
+    .search-bar input[type="text"] {
+        width: 100%;
+        margin-top: 10px;
+    }
+
+    /* Carousel on smaller screens */
+    .carousel-item img {
+        max-height: 300px;
+    }
+
+    .carousel-container {
+        width: 100%;
+    }
+}
+
+/* Additional styling for hover effects and transitions */
+.navbar ul li a {
+    transition: color 0.3s;
+}
+
+.navbar ul li a:hover {
+    color: #FFD700;
+}
+
+.search-bar input[type="text"] {
+    transition: box-shadow 0.3s;
+}
+
+.search-bar input[type="text"]:focus {
+    box-shadow: 0 0 5px rgba(0, 0, 0, 0.3);
+}
